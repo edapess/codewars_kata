@@ -219,3 +219,15 @@
  
 //   return result.length > 1 ? result.join(', ').replace(/,([^,]*)$/,' and'+'$1') : result[0]
 // }
+// class Ball{
+//   constructor(ballType='regular'){
+//   this.ballType = ballType}
+  
+//   }
+
+//   ball1 = new Ball();
+// ball2 = new Ball("super");
+
+// console.log(ball1.ballType);
+ 
+// console.log(ball2.ballType);
