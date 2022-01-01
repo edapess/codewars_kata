@@ -33,7 +33,9 @@
 // // alphabetPosition("The sunset sets at twelve o' clock.")
 
 
-// //******************************************************************** */
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 // //tribonacci
 
 // // function tribonacci(signature, n) {
@@ -59,7 +61,8 @@
 // // tribonacci([1, 4, 3], 11)
 // // tribonacci([18, 8, 4], 1)
 
-// //******************************************************************** */
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 // // The goal of this exercise is to convert a string to a new string where each 
 // // character in the new string is "(" if that character appears only once in the original
@@ -109,6 +112,7 @@
 // console.log(absentVowel('John Doe hs seven red pples under his bsket'));
 // console.log(absentVowel('Bb Smith sent us six neatly arranged range bicycles'));
 
+// -------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // function getMiddle(s) {
@@ -201,7 +205,7 @@
 //       result = [];
 
 //   if (seconds === 0) return 'now';
-  
+
 //   for (var key in time) {
 //     if (seconds >= time[key]) {
 //       var val = Math.floor(seconds/time[key]);
@@ -211,23 +215,104 @@
 //       }
 //       else{
 //         result.push(val+= ' ' + key)
-        
+
 //       }
 //       seconds = seconds % time[key];
 //     }
 //   }
- 
+
 //   return result.length > 1 ? result.join(', ').replace(/,([^,]*)$/,' and'+'$1') : result[0]
 // }
 // class Ball{
 //   constructor(ballType='regular'){
 //   this.ballType = ballType}
-  
+
 //   }
 
 //   ball1 = new Ball();
 // ball2 = new Ball("super");
 
 // console.log(ball1.ballType);
- 
+
 // console.log(ball2.ballType);
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
+//  array helpers
+// Array.prototype.square = function() {
+//   return this.map(function(n) {return n*n} )
+// }
+
+// Array.prototype.cube = function() {
+//   return this.map(function(n) {return n*n*n} )
+// }
+
+// Array.prototype.sum = function() {
+//   return this.reduce(function(sum,n) {return sum+n}, 0)
+// }
+
+// Array.prototype.average = function() {
+//   return this.sum() / this.length
+// }
+
+// Array.prototype.even = function() {
+//   return this.filter(function(n) { return n % 2 === 0})
+// }
+
+// Array.prototype.odd = function() {
+//   return this.filter(function(n) { return n % 2 !== 0 })
+// }
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+// Array.prototype.reduce = function(process, initial) {
+//   for (let i = 0; i < this.length; i++) {
+//     if (!initial){i++;initial=this[0]}
+//     initial =  process(initial, this[i]);
+//  }
+//  return initial
+// }
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+// function capitalizeWord(word) {
+// return word.charAt(0).toUpperCase() + word.slice(1)
+// }
+
+
+// console.log(capitalizeWord('word'));
+
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+// function century(year) {
+// return Math.floor((year-1)/100)+1
+// }
+
+
+// console.log(century(1708));
+// console.log(century(1720));
+// console.log(century(1801));
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// function toBinary(n) {
+// let str = (n>>>0).toString(2)
+// return parseInt(str)
+// }
+
+// console.log('toBinary:', toBinary(5))
+// console.log('toBinary:', toBinary(2))
+// console.log('toBinary:', toBinary(1))
+// console.log('toBinary(10):', toBinary(10))
+
+// -------------------------------------------------------------------------------------------------------------------------------------------------
+
+function fakeBin(x) {
+    let bin = []
+    for (let i = 0; i < x.length; i++) {
+      +x.charAt(i) < 5 ? bin.push("0") : bin.push("1")
+    }
+    return bin.join("")
+}
+
+
+console.log( fakeBin('45385593107843568'))
