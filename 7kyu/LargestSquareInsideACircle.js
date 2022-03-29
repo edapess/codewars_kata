@@ -4,5 +4,3 @@ function areaLargestSquare(r) {
     return Math.round(side*side)
     
   }
-  console.log(areaLargestSquare(8));
-  console.log(areaLargestSquare(5));
